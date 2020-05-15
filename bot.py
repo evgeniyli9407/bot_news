@@ -16,8 +16,8 @@ def send_news():
 
 response = requests.get('https://api.telegram.org/bot1188676209:AAEn-FoBoN9LsmqaONEukFk5PcVTF7H27-Y/getUpdates')
 data = response.json()
-
-tb = telebot.TeleBot()
+token = ''
+tb = telebot.TeleBot(token)
 list_chat_id = []
 
 for i in data['result']:
